@@ -2,4 +2,4 @@ if [ "$1" = "prereqs" ]; then exit 0; fi
 
 . /usr/share/initramfs-tools/hook-functions
 
-copy_file firmware /lib/firmware/tegra19x_xusb_firmware
+copy_file firmware /lib/firmware/tegra18x_xusb_firmware
