@@ -3,7 +3,9 @@ Set rootfs to be on a USB drive
 
 Original article on JetsonHacks: https://wp.me/p7ZgI9-317
 
-=> BvdM - 20200803 For TX2 JetPack 4.3 use /lib/firmware/tegra19x_xusb_firmware.
+## Cloned from jetsonHacksNano
+
+For TX2 with xEC2 (based on JetPack 4.3) use /lib/firmware/tegra18x_xusb_firmware and add it to initramfs. Next modify extlinux.conf to point the root to e.g. /dev/sda1. Fall back options will only work when you manage create an early console connection by hooking up an USB2Serial convertor. 
 
 <em><b>WARNING: </b>This is a low level system change. You may have issues which are not easily solved. You should do this working on a freshly flashed micro SD card, and certainly do not attempt this with valuable data on the card itself. Assume that if this does not work, you may have to flash the micro SD card again. A serial debug console is useful if things go wrong. </em>
 
